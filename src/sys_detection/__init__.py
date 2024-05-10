@@ -27,17 +27,18 @@ VALID_ATTR_RE = re.compile('^[a-z_]+$')
 SHORT_LINUX_OS_NAMES = [
     'almalinux',
     'alpine',
+    'amazonlinux',
+    'amzn',
+    'arch',
     'centos',
     'debian',
     'fedora',
+    'manjaro',
     'ol',
-    'rocky',
-    'ubuntu',
     'opensuse-leap',
     'opensuse-tumbleweed',
-    'arch',
-    'manjaro',
-    'amzn'
+    'rocky',
+    'ubuntu',
 ]
 
 SHORT_OS_NAMES = ['macos'] + SHORT_LINUX_OS_NAMES
