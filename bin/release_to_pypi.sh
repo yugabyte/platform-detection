@@ -32,7 +32,7 @@ python3 setup.py sdist
 # [pypi]
 # repository = https://upload.pypi.org/legacy/
 #
-# [llvm-installer]
+# [sys-detection]
 # repository = https://upload.pypi.org/legacy/
 # username = __token__
 # password = pypi-... (the actual token value)
