@@ -27,7 +27,7 @@ python3 setup.py sdist
 # [distutils]
 # index-servers =
 #   pypi
-#   llvm-installer
+#   sys-detection
 #
 # [pypi]
 # repository = https://upload.pypi.org/legacy/
