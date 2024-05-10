@@ -29,6 +29,7 @@ $(VENV_NAME)/bin/activate: setup.py
 	[[ -d "$(VENV_NAME)" ]] || python3 -m venv "$(VENV_NAME)"
 	$(VENV_PYTHON) -m pip install --upgrade pip
 	$(VENV_PYTHON) -m pip install --upgrade wheel
+	$(VENV_PYTHON) -m pip install --upgrade setuptools
 	$(VENV_PYTHON) -m pip install --editable '.[dev]'
 	touch "$(VENV_NAME)/bin/activate"
 

@@ -18,14 +18,23 @@ set -euo pipefail -x
 cd "${BASH_SOURCE[0]%/*}"/..
 
 rm -f dist/*
+. venv/bin/activate
+pip3 install setuptools
 python3 setup.py sdist
 
-# "command -v" is somewhat similar to "which".
-# https://github.com/koalaman/shellcheck/wiki/SC2230
-if command -v twine >/dev/null; then
-  twine_cmd=twine
-else
-  twine_cmd="python3 -m twine"
-fi
+# Set up your .pypirc file as follows;
+#
+# [distutils]
+# index-servers =
+#   pypi
+#   llvm-installer
+#
+# [pypi]
+# repository = https://upload.pypi.org/legacy/
+#
+# [llvm-installer]
+# repository = https://upload.pypi.org/legacy/
+# username = __token__
+# password = pypi-... (the actual token value)
 
-$twine_cmd upload dist/*
+venv/bin/python3 -m twine upload --repository sys-detection dist/*
