@@ -46,6 +46,7 @@ if __name__ == '__main__':
                 'pycodestyle',
                 'mypy',
                 'pytest',
+                'twine',
             ]
         }
     )
